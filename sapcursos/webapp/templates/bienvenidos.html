@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAP CURSOS</title>
+    <style>
+
+    </style>
+            <nav class="navbar navbar-light" style="background-color: #f5c0ba;"><br>
+                    <a class="navbar-brand">STUDY CURSOS 📕</a>
+                  <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="BUSCAR" placeholder="BUSCAR" aria-label="BUSCAR">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
+                  </form>
+            </nav>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-default" align="center">
+        <div class ="panel-heading">
+            <h1 class = "panel-tittle" style="color:#325a70">Bienvenidos al Sistema de Inscipción de Estudiantes</h1>
+        </div>
+        <h3>Estudiantes Registrados: {{cantidad}} 🧑🏻‍🎓</h3>
+        <div>
+            <div align="center" class="wpb_wrapper">
+                <h4>STUDY CURSOS</h4>
+                <div class="wpb_text_column wpb_content_element ">
+                    <div class="wpb_wrapper">
+                        <h1 style="color:#800080">CURSOS VIRTUALES 📚</h1>
+                    </div>
+                </div>
+                    <div class ="panel-heading">
+                        <p style="color:#001236"><i>Cursos, orientados al ámbito tecnológico, tienen como finalidad incrementar la productividad del estudiante influyendo positivamente en su desarrollo académico y profesional.</i></p>
+                    </div>
+            </div>
+        </div>
+            <div>
+                <a href="nuevo_estudiante" class="btn btn-success" ><strong >Agregar Estudiante 👨‍🎓<strong></a>
+                <br>
+                <br>
+            </div>
+    </div>
+    <div class="table-responsive" align="center">
+         <table class="table table-bordered  text-center table-hover" style="width:30%"  ><br>
+             <thead style="background-color: #f9fad9;" >
+                    <tr style="background-color: #c9e2f0;">
+                        <th style="color:#366785">ID</th>
+                        <th style="color:#366785">Apellido</th>
+                        <th style="color:#366785">Nombre</th>
+                        <th style="color:#366785">Genero</th>
+                        <th style="color:#366785">Email Estudiante</th>
+                        <th style="color:#366785">Ciudad</th>
+                        <th style="color:#366785">Curso</th>
+                        <th style="color:#366785">Aula</th>
+                        <th style="color:#366785">Semestre</th><
+                        <th style="color:#366785">Modalidad</th><
+                        <th style="color:#366785">Nivel</th><
+                        <th style="color:#366785">Tutor Asignado</th><
+                        <th style="color:#366785">Titulo</th><
+                        <th style="color:#366785">Email Tutor</th>
+                        <th style="color:#366785">Detalle 🔍 </th>
+                        <th style="color:#366785">Editar💻</th>
+                        <th style="color:#366785">Eliminar ❌</th>
+                    </tr>
+                    {% for estudiante in estudiantes %}
+                    <tr>
+                        <td>{{ estudiante.id }}</td>
+                        <td>{{ estudiante.apellido }}</td>
+                        <td>{{ estudiante.nombre }}</td>
+                        <td>{{ estudiante.genero }}</td>
+                        <td>{{ estudiante.email }}</td>
+                        <td>{{ estudiante.direccion.calle}}</td>
+                        <td>{{ estudiante.curso.nombrecurso}}</td>
+                        <td>{{ estudiante.curso.aula}}</td>
+                        <td>{{ estudiante.curso.semestre}}</td>
+                        <td>{{ estudiante.curso.modalidad}}</td>
+                        <td>{{ estudiante.curso.nivel}}</td>
+                        <td>{{ estudiante.tutor.nombretutor}} {{ estudiante.tutor.apellidotutor}}</td>
+                        <td>{{ estudiante.tutor.titulo}}</td>
+                        <td>{{ estudiante.tutor.email}}</td>
+                        <td><a href = "detalle_estudiante/{{ estudiante.id }}" class="btn btn-info"/> Ver Detalle 🔵</td>
+                        <td><a href = "modificar_estudiante/{{ estudiante.id }}" class="btn btn-primary"/> Modificar🟠</td>
+                        <td><a href = "eliminar_estudiante/{{ estudiante.id }}" class="btn btn-danger"/> Borrar 🔴</td>
+                    </tr>
+                    {% endfor %}
+             </thead>
+         </table>
+            <div>
+                <a href="reporte_estudiantes" class="btn btn-warning" ><strong>Descargar Listado en Excel 📋<strong></a>
+                <br>
+                <br>
+            </div>
+    </div>
+</body>
+</html>
