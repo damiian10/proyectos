@@ -1,0 +1,9 @@
+ID,APELLIDO,NOMBRE,GENERO,EMAIL ESTUDIANTE,CIUDAD,MATERIA,AULA,SEMESTRE,MODALIDAD,NIVEL,TUTOR ASIGNADO,TITULO,EMAIL TUTOR
+5,Fajardo,Edison,Masculino,efajar@mail.com,Loja,Musica,A4,1,Virtual,Basico,Leonardo Diaz,Music,ldiaz@mail.com
+4,Loor,Miossotys,Femenino,mloor@gmail.com,Cuenca,Diseño Gráfico,A3,1,Presencial,Avanzado,Hernesto Paye,Técn,hpaye@gmail.com
+8,Lopez,Jeremy,Masculino,jlopez@gmail.com,Quito,One Note,A6,2,Presencial,Intermedio,Mauro Aguilar,LI,maguilar@gmail.com
+1,Loza,Damian,Masculino,dloza@mail.com,Quito,Excel,A2,2,Virtual,Basico,Luis Teran,Ing,lteran@mail.com
+3,Oleas,Jonathan,Masculino,joleas@gmail.com,Guayaquil,Word,A3,1,Semi Presencial,Intermedio,Martin Liberman,Lcdo,mliberman@gmail.com
+6,Ortiz,Melany,Femenino,mortiz@mail.com,Guayaquil,Marketing,A5,3,Semi Presencial,Avanzado,Pedro Suarez,Lcdo,psuarez@mail.com
+7,Velez,Suanny,Femenino,svelez@gmail.com,Santa Elena,Redes Sociales,A8,1,Virtual,Basico,Paul Mora,Lcdo,pmora@gmail.com
+9,Zera,Zelly,Femenino,zzera@gmail.com,Cuenca,Word,A3,1,Semi Presencial,Intermedio,Martin Liberman,Lcdo,mliberman@gmail.com
