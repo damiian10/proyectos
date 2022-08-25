@@ -6,7 +6,7 @@ from estudiante.models import Estudiante
 class PersonaFormulario(ModelForm):
     class Meta:
         model = Estudiante
-        fields = ('nombre', 'apellido', 'genero', 'email','direccion','curso', 'tutor')
+        fields = ('nombre', 'apellido', 'genero', 'email','direccion','curso','tutor')
         widgets = {
             'email': EmailInput(attrs={'type': 'email'})
         }

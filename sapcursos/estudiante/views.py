@@ -6,8 +6,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 
 # Create your views here.
+from rest_framework import viewsets
+
 from estudiante.form import PersonaFormulario
-from estudiante.models import Estudiante
+from estudiante.models import Estudiante, Tutor, Curso, Direccion
+from estudiante.serializers import EstudianteSerializer, TutorSerializer, CursoSerializer, DireccionSerializer
 
 
 def detalle_estudiante(request,id):
@@ -98,3 +101,29 @@ def reporte_estudiantes(request):
     response["Content-Disposition"] = contenido
     wb.save(response)
     return response
+
+
+class EstudianteViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Estudiante.objects.all()
+    serializer_class = EstudianteSerializer
+
+class TutorViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Tutor.objects.all()
+    serializer_class = TutorSerializer
+
+class CursoViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Curso.objects.all()
+    serializer_class = CursoSerializer
+
+class DireccionViewSet(viewsets.ModelViewSet):
+    queryset = Direccion.objects.all()
+    serializer_class = DireccionSerializer

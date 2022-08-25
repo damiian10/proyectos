@@ -26,7 +26,7 @@
 <body>
     <div class="navbar navbar-default" align="center">
         <div class ="panel-heading">
-            <h1 class = "panel-tittle" style="color:#325a70">Bienvenidos al Sistema de Inscipción de Estudiantes</h1>
+            <h1 class = "panel-tittle" style="color:#325a70">Bienvenidos al Sistema de Inscripción de Estudiantes</h1>
         </div>
         <h3>Estudiantes Registrados: {{cantidad}} 🧑🏻‍🎓</h3>
         <div>
@@ -71,9 +71,10 @@
                         <th style="color:#366785">Eliminar ❌</th>
                     </tr>
                     {% for estudiante in estudiantes %}
+                <tbody>
                     <tr>
                         <td>{{ estudiante.id }}</td>
-                        <td>{{ estudiante.apellido }}</td>
+                        <td class ='standing-table__cell standing-table__cell--name'>{{ estudiante.apellido }}</td>
                         <td>{{ estudiante.nombre }}</td>
                         <td>{{ estudiante.genero }}</td>
                         <td>{{ estudiante.email }}</td>
@@ -91,6 +92,7 @@
                         <td><a href = "eliminar_estudiante/{{ estudiante.id }}" class="btn btn-danger"/> Borrar 🔴</td>
                     </tr>
                     {% endfor %}
+                </tbody>
              </thead>
          </table>
             <div>
