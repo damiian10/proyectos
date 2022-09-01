@@ -46,8 +46,13 @@ def listar_empleados(url):
     #print(empleados['data'][14]['employee_salary'])
     salario_maximo = empleados['data'][16]['employee_salary']
     salario_minimo = empleados['data'][23]['employee_salary']
-    salariostotales = sum((empleados['data'][0]['employee_salary'],empleados['data'][1]['employee_salary'],empleados['data'][2]['employee_salary'],empleados['data'][3]['employee_salary'],empleados['data'][4]['employee_salary'],empleados['data'][5]['employee_salary'],empleados['data'][6]['employee_salary'],empleados['data'][7]['employee_salary'],empleados['data'][8]['employee_salary'],empleados['data'][9]['employee_salary'],empleados['data'][10]['employee_salary'],
-                           empleados['data'][11]['employee_salary'],empleados['data'][12]['employee_salary'],empleados['data'][13]['employee_salary'],empleados['data'][14]['employee_salary'],empleados['data'][15]['employee_salary'],empleados['data'][16]['employee_salary'],empleados['data'][17]['employee_salary'],empleados['data'][18]['employee_salary'],empleados['data'][19]['employee_salary'],empleados['data'][20]['employee_salary'],
+    salariostotales = sum((empleados['data'][0]['employee_salary'],empleados['data'][1]['employee_salary'],empleados['data'][2]['employee_salary'],
+                           empleados['data'][3]['employee_salary'],empleados['data'][4]['employee_salary'],empleados['data'][5]['employee_salary'],
+                           empleados['data'][6]['employee_salary'],empleados['data'][7]['employee_salary'],empleados['data'][8]['employee_salary'],
+                           empleados['data'][9]['employee_salary'],empleados['data'][10]['employee_salary'],empleados['data'][11]['employee_salary'],
+                           empleados['data'][12]['employee_salary'],empleados['data'][13]['employee_salary'],empleados['data'][14]['employee_salary'],
+                           empleados['data'][15]['employee_salary'],empleados['data'][16]['employee_salary'],empleados['data'][17]['employee_salary'],
+                           empleados['data'][18]['employee_salary'],empleados['data'][19]['employee_salary'],empleados['data'][20]['employee_salary'],
                            empleados['data'][21]['employee_salary'],empleados['data'][22]['employee_salary'],empleados['data'][23]['employee_salary'])) / 24
     #print(round(salariostotales, 2))
 
@@ -55,9 +60,14 @@ def listar_empleados(url):
     #print(empleados['data'][14]['employee_age'])
     edad_menor = empleados['data'][14]['employee_age']
     edad_mayor = empleados['data'][2]['employee_age']
-    edadestotales = sum((empleados['data'][0]['employee_age'], empleados['data'][1]['employee_age'],empleados['data'][2]['employee_age'], empleados['data'][3]['employee_age'],empleados['data'][4]['employee_age'], empleados['data'][5]['employee_age'],empleados['data'][6]['employee_age'], empleados['data'][7]['employee_age'],empleados['data'][8]['employee_age'], empleados['data'][9]['employee_age'],empleados['data'][10]['employee_age'],
-                           empleados['data'][11]['employee_age'], empleados['data'][12]['employee_age'],empleados['data'][13]['employee_age'], empleados['data'][14]['employee_age'],empleados['data'][15]['employee_age'], empleados['data'][16]['employee_age'],empleados['data'][17]['employee_age'], empleados['data'][18]['employee_age'],empleados['data'][19]['employee_age'], empleados['data'][20]['employee_age'],
-                           empleados['data'][21]['employee_age'], empleados['data'][22]['employee_age'],empleados['data'][23]['employee_age'])) / 24
+    edadestotales = sum((empleados['data'][0]['employee_age'], empleados['data'][1]['employee_age'],empleados['data'][2]['employee_age'],
+                         empleados['data'][3]['employee_age'],empleados['data'][4]['employee_age'], empleados['data'][5]['employee_age'],
+                         empleados['data'][6]['employee_age'], empleados['data'][7]['employee_age'],empleados['data'][8]['employee_age'], 
+                         empleados['data'][9]['employee_age'],empleados['data'][10]['employee_age'],empleados['data'][11]['employee_age'],
+                         empleados['data'][12]['employee_age'],empleados['data'][13]['employee_age'], empleados['data'][14]['employee_age'],
+                         empleados['data'][15]['employee_age'], empleados['data'][16]['employee_age'],empleados['data'][17]['employee_age'],
+                         empleados['data'][18]['employee_age'],empleados['data'][19]['employee_age'], empleados['data'][20]['employee_age'],
+                         empleados['data'][21]['employee_age'], empleados['data'][22]['employee_age'],empleados['data'][23]['employee_age'])) / 24
     #print(edadestotales)
 
     print('\033[31m')
